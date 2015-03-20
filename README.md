@@ -36,7 +36,7 @@ Once the dependencies are rounded up, simple invoke Premake5.
 # Content
 To run the example program, you'll need some content. The basic package,
 including a default image, a font, and the shader can be extracted from the
-prebuilt binary: http://aaronbolyard.com/file_download/1/algaecanvas-20150320.zip
+prebuilt binary: http://aaronbolyard.com/file_download/5/algaecanvas-20150320.zip
 
 The included program, Algae.Svg, can parse an SVG and spit out a file that can
 be used with Algae.Test. Simply run Algae.Test with a different 'LVG' file as
