@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Xml.Linq;
 
 namespace CommaExcess.Algae.Test
 {
@@ -13,7 +12,7 @@ namespace CommaExcess.Algae.Test
 			string file = "content/default.lvg";
 			if (args.Length > 0)
 			{
-				file = args[1];
+				file = args[0];
 			}
 
 			using (TestApplication app = new TestApplication(file))

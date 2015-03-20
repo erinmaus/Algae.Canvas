@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Xml.Linq;
 
 using CommaExcess.Algae.Graphics;
 using CommaExcess.Algae.Graphics.Lvg;

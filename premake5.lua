@@ -14,21 +14,28 @@ project "Algae"
 	language "C#"
 	kind "SharedLib"
 	files { "Source/Algae/**.cs" }
-	links { "System.dll", "System.XML.dll", "System.XML.Linq.dll", "OpenTK.dll" }
+	links { "System.dll", "System.Xml.dll", "System.Xml.Linq.dll", "OpenTK.dll" }
 
-	filter "system:windows"
+	if os.get() == "windows"
 		defines { "WINDOWS" }
 
 project "Algae.Canvas"
 	language "C#"
 	kind "SharedLib"
 	files { "Source/Algae.Canvas/**.cs" }
-	links { "System.dll", "System.XML.dll", "System.XML.Linq.dll", "Triangle.dll", "SharpFont" }
+	links { "System.dll", "System.Xml.dll", "System.Xml.Linq.dll", "Triangle.dll", "SharpFont" }
 	dependson { "Algae" }
 
 project "Algae.Test"
 	language "C#"
 	kind "WindowedApp"
 	files { "Source/Algae.Test/**.cs" }
-	links { "System.dll", "System.XML.dll", "System.XML.Linq.dll", "Triangle.dll", "SharpFont" }
+	links { "System.dll" }
+	dependson { "Algae", "Algae.Canvas" }
+
+project "Algae.Svg"
+	language "C#"
+	kind "ConsoleApp"
+	files { "Source/Algae.Svg/**.cs" }
+	links { "System.dll", "System.Xml.dll", "System.Xml.Linq.dll", "Svg.dll" }
 	dependson { "Algae", "Algae.Canvas" }
