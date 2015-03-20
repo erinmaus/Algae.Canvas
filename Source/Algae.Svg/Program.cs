@@ -76,7 +76,7 @@ namespace CommaExcess.Algae.Svg
 		static void EmitGroup(SvgGroup group, XElement parentElement)
 		{
 			string transform = ParseMatrix(group.Transforms.GetMatrix());
-			string fill = FormatFill(group.Fill, group.Opacity * group.FillOpacity);
+			string fill = String.Format("FFFFFF {0:N4}", group.Opacity * group.FillOpacity);
 
 			string id;
 			if (String.IsNullOrEmpty(group.ID))

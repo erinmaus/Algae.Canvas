@@ -103,7 +103,9 @@ namespace CommaExcess.Algae.Test
 				textBuilder.BufferText(text, "Could not load image.");
 			}
 
-			canvas = new Canvas(Renderer, material, 2);
+			// Use a single thread for now until the multithreaded race
+			// condition is found... Urgh.
+			canvas = new Canvas(Renderer, material, 0);
 		}
 
 		public override void UnloadContent()
